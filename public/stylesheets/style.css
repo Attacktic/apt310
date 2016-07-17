@@ -1,0 +1,65 @@
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+}
+
+a {
+  color: #00B7FF;
+}
+
+main{
+  background-color: black;
+  width: 100vw;
+  height: 90vh;
+  padding-top: 10vh;
+}
+
+.loginbox {
+  margin: auto;
+  width: 30%;
+  height: 85%;
+  background-color: white;
+  border-radius: 4px;
+}
+
+#logintext{
+  margin: auto;
+  padding-top: 8vh;
+  width: 85%;
+  height: 25%;
+  text-align: center;
+  font-size: 4em;
+}
+
+input{
+  text-align: center;
+  font-size: 2.5em;
+  display: block;
+  margin: auto;
+  width: 80%;
+  height: 8vh;
+}
+
+input[type=submit]{
+  cursor: pointer;
+  margin-top: 4vh;
+  background-color: #ECECEC;
+  border: none;
+}
+
+.nameform{
+  width: 85%;
+  height: 30%;
+  margin: auto;
+}
+
+.message{
+  width: 85%;
+  height: 10%;
+  margin: auto;
+  color: red;
+  text-align: center;
+  font-size: 1.2em;
+}
