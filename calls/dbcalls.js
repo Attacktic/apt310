@@ -13,5 +13,11 @@ module.exports = {
   },
   capFirst: function(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+  },
+  months: function(){
+    return knex.raw("select * from month order by id");
+  },
+  usermonthpayments: function(user){
+    return knex.raw(`select users.name as user_name, month.month as month, bills.name as bill, paymentsdue.amount from paymentsdue join month on month.id = paymentsdue.month_id join bills on bills.id = paymentsdue.bill_id join users on users.id = paymentsdue.user_id where users.name='${user}'`);
   }
 };

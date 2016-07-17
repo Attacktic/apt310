@@ -63,3 +63,31 @@ input[type=submit]{
   text-align: center;
   font-size: 1.2em;
 }
+.months{
+  margin-top: 4vh;
+  width: 30%;
+  height: 60%;
+  display: inline-block;
+  float: right;
+}
+.month{
+  width: 100%;
+  height: 6%;
+  background-color: black;
+  display: block;
+  color: white;
+  display: block;
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: 0.8em;
+}
+
+#dueinfo{
+  margin-top: 2vh;
+  width: 66%;
+  padding: 2%;
+  height: 80%;
+  background-color: red;
+  display: inline-block;
+  float: left;
+}
