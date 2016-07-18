@@ -44,12 +44,29 @@ $(document).ready(function(){
       }
     });
   });
+
+
   $(document).on('click', '.false', function(){
+    var link = thisurl + "update/" + this.id + "/" + true;
+    this.className = "true";
+    this.innerHTML = "v"
     $.ajax({
-      url: thisurl + this.id + "/" + this.className,
-      method: "GET",
+      url: link,
+      method: "POST",
       success: function(data){
-        console.log("updated " + this.id + " " + this.className);
+        console.log("updated " + this.id + " " + true);
+      }
+    });
+  });
+  $(document).on('click', '.true', function(){
+    var link = thisurl + "update/" + this.id + "/" + false;
+    this.className = "false";
+    this.innerHTML = "x";
+    $.ajax({
+      url: link,
+      method: "POST",
+      success: function(data){
+        console.log("updated " + this.id + " " + false);
       }
     });
   });
