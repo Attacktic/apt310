@@ -60,6 +60,7 @@ $(document).ready(function(){
     });
   }
 
-
-  $(document).on('click', '.false', toggleFalse('true');
+  $(document).on('click', '.false', toggleFalse('true'));
   $(document).on('click', '.true', toggleFalse('false'));
+
+});
