@@ -22,15 +22,34 @@ $(document).ready(function(){
         for (var i in datablock){
           var elementname = document.createElement("div");
           var elementamount = document.createElement("div");
+          var status = document.createElement("button");
+          if(datablock[i].status === false){
+            status.innerHTML = 'x';
+          }
+          else {
+            status.innerHTML = 'v';
+          }
           elementname.className = "bill";
           elementamount.className = "amount";
+          status.className = datablock[i].status;
+          status.id = datablock[i].id;
           elementname.innerHTML = datablock[i].bill;
-          elementamount.innerHTML = datablock[i].amount;
+          elementamount.innerHTML = "$" + datablock[i].amount;
           $('#dueinfo').append(elementname);
           $('#dueinfo').append(elementamount);
+          $('#dueinfo').append(status);
           }
         }
-        else { $('#dueinfo').html("Nothing for this month yet");}
+        else { $('#dueinfo').html("No data from this month yet!");}
+      }
+    });
+  });
+  $(document).on('click', '.false', function(){
+    $.ajax({
+      url: thisurl + this.id + "/" + this.className,
+      method: "GET",
+      success: function(data){
+        console.log("updated " + this.id + " " + this.className);
       }
     });
   });

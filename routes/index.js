@@ -32,6 +32,10 @@ router.post('/', function(req, res, next) {
   });
 });
 
-
+router.get('/update/:id/:status', function(req, res, next) {
+  dbcalls.updatestatus(req.params.id, req.params.status).then(function(){
+    console.log("updated " + req.params.id);
+  });
+});
 
 module.exports = router;

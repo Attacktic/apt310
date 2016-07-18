@@ -80,9 +80,10 @@ input[type=submit]{
   text-align: center;
   margin-bottom: 4px;
   font-size: 0.8em;
+  cursor: pointer;
 }
 
-#dueinfo{
+.duebox{
   margin-top: 2vh;
   width: 66%;
   padding: 2%;
@@ -90,4 +91,64 @@ input[type=submit]{
   background-color: red;
   display: inline-block;
   float: left;
+}
+#due{
+  width: 100%;
+  height: 8%;
+}
+#dueinfo{
+  width: 100%;
+  height: 80%;
+}
+.bill{
+  width: 40%;
+  height: 8%;
+  display: inline-block;
+}
+
+.amount{
+  width: 35%;
+  height: 8%;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.billhead{
+  width: 40%;
+  height: 60%;
+  display: inline-block;
+  color: blue;
+  text-align: center;
+  border-right: 1px solid black;
+}
+
+.amounthead{
+  width: 35%;
+  height: 60%;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+  color: blue;
+  text-align: center;
+  border-right: 1px solid black;
+}
+
+.paidhead{
+  display: inline-block;
+  width: 12%;
+  height: 60%;
+  text-align: center;
+  color: blue;
+}
+
+.false, .true{
+  display: inline-block;
+  width: 12%;
+  height: 4%;
+  margin-right: 0;
+  border: 1px solid black;
+  background-color: transparent;
+  float: right;
+  cursor: pointer;
 }

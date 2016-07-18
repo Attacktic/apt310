@@ -7,7 +7,14 @@
   <body>
     <main>
         <div class="loginbox">
+          <div class="duebox">
+            <div id="due">
+              <div class="billhead">Bill</div>
+              <div class="amounthead">$</div>
+              <div class="paidhead">paid?</div>
+            </div>
             <div id="dueinfo">block</div>
+          </div>
             <div class="months">
             <% for (var i in months){ %>
               <div class="month"><%= months[i].month %></div>
