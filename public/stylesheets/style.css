@@ -120,23 +120,25 @@ input[type=submit]{
   display: inline-block;
   color: blue;
   text-align: center;
-  border-right: 1px solid black;
+  background-color: white;
+  border-right: 1px solid transparent;
 }
 
 .amounthead{
+  background-color: white;
   width: 35%;
   height: 60%;
   display: inline-block;
   text-align: right;
-  margin-right: 10px;
   color: blue;
   text-align: center;
-  border-right: 1px solid black;
+  border-right: 1px solid transparent;
 }
 
 .paidhead{
+  background-color: white;
   display: inline-block;
-  width: 12%;
+  width: 21%;
   height: 60%;
   text-align: center;
   color: blue;
@@ -165,5 +167,5 @@ input[type=submit]{
   float: right;
   width: 14%;
   height: 4%;
-  background-color: black;
+  background-color: grey;
 }
