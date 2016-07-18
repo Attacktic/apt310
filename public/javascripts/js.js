@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $('.month').hide();
   var thisurl = window.location.href.substring(0, window.location.href.lastIndexOf(location.host) + location.host.length + 1);
   var name = window.location.href.substring(window.location.href.lastIndexOf(location.host) + location.host.length + 1, window.location.href.indexOf("/dashboard"));
   function getmonthdue(month, data){
@@ -10,6 +11,11 @@ $(document).ready(function(){
     }
     return thismonth;
   }
+
+  $(document).on("click", '.monthsbox', function(){
+    $('.month').show();
+  });
+
   $(document).on('click', '.month', function(){
     var month = this.innerHTML;
     $('#dueinfo').empty();
@@ -42,27 +48,18 @@ $(document).ready(function(){
     });
   });
 
+  function toggleFalse(truefalse){
+    var link = thisurl + "update/" + this.id + "/" + truefalse;
+    this.className = truefalse;
+    $.ajax({
+      url: link,
+      method: "POST",
+      success: function(data){
+        console.log("updated " + this.id + " " + truefalse);
+      }
+    });
+  }
 
-  $(document).on('click', '.false', function(){
-    var link = thisurl + "update/" + this.id + "/" + true;
-    this.className = "true";
-    $.ajax({
-      url: link,
-      method: "POST",
-      success: function(data){
-        console.log("updated " + this.id + " " + true);
-      }
-    });
-  });
-  $(document).on('click', '.true', function(){
-    var link = thisurl + "update/" + this.id + "/" + false;
-    this.className = "false";
-    $.ajax({
-      url: link,
-      method: "POST",
-      success: function(data){
-        console.log("updated " + this.id + " " + false);
-      }
-    });
-  });
-});
+
+  $(document).on('click', '.false', toggleFalse('true');
+  $(document).on('click', '.true', toggleFalse('false'));
