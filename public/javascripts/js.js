@@ -20,9 +20,11 @@ $(document).ready(function(){
         if (getmonthdue(month, data).length !== 0){
         var datablock = getmonthdue(month, data);
         for (var i in datablock){
+          var switchbox = document.createElement("div");
           var elementname = document.createElement("div");
           var elementamount = document.createElement("div");
-          var status = document.createElement("button");
+          var status = document.createElement("div");
+          switchbox.className = "switchbox";
           elementname.className = "bill";
           elementamount.className = "amount";
           status.className = datablock[i].status;
@@ -31,7 +33,8 @@ $(document).ready(function(){
           elementamount.innerHTML = "$" + datablock[i].amount;
           $('#dueinfo').append(elementname);
           $('#dueinfo').append(elementamount);
-          $('#dueinfo').append(status);
+          $('#dueinfo').append(switchbox);
+          $('.switchbox').append(status);
           }
         }
         else { $('#dueinfo').html("No data from this month yet!");}
