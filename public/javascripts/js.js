@@ -23,12 +23,6 @@ $(document).ready(function(){
           var elementname = document.createElement("div");
           var elementamount = document.createElement("div");
           var status = document.createElement("button");
-          if(datablock[i].status === false){
-            status.innerHTML = 'x';
-          }
-          else {
-            status.innerHTML = 'v';
-          }
           elementname.className = "bill";
           elementamount.className = "amount";
           status.className = datablock[i].status;
@@ -49,7 +43,6 @@ $(document).ready(function(){
   $(document).on('click', '.false', function(){
     var link = thisurl + "update/" + this.id + "/" + true;
     this.className = "true";
-    this.innerHTML = "v"
     $.ajax({
       url: link,
       method: "POST",
@@ -61,7 +54,6 @@ $(document).ready(function(){
   $(document).on('click', '.true', function(){
     var link = thisurl + "update/" + this.id + "/" + false;
     this.className = "false";
-    this.innerHTML = "x";
     $.ajax({
       url: link,
       method: "POST",

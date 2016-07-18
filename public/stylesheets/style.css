@@ -64,7 +64,7 @@ input[type=submit]{
   font-size: 1.2em;
 }
 .months{
-  margin-top: 4vh;
+  margin-top: 10vh;
   width: 30%;
   height: 60%;
   display: inline-block;
@@ -88,9 +88,9 @@ input[type=submit]{
   width: 66%;
   padding: 2%;
   height: 80%;
-  background-color: red;
   display: inline-block;
   float: left;
+  background-color: #F6F6F6;
 }
 #due{
   width: 100%;
@@ -144,11 +144,16 @@ input[type=submit]{
 
 .false, .true{
   display: inline-block;
-  width: 12%;
+  width: 6%;
   height: 4%;
   margin-right: 0;
-  border: 1px solid black;
-  background-color: transparent;
+  background-color: red;
+  border: none;
   float: right;
   cursor: pointer;
+  color: red;
+}
+
+.true{
+  background-color: green;
 }
